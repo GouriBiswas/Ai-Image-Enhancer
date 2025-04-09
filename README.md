@@ -2,9 +2,6 @@
 
 In this project, I built an **AI-powered image enhancer** using **React**. This tool uses artificial intelligence to **enhance image quality**, **upscale resolution**, and **bring out hidden details** — all in real time.
 
-> 📽️ **Watch the full demo** on YouTube: [Video Link](https://youtu.be/your-video-link)
-
-> 📂 **Source Code**: [GitHub Repository](https://github.com/master-dhanesh/react-ai-image-enhancer)
 
 ---
 

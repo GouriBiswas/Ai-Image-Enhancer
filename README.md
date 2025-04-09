@@ -1,12 +1,36 @@
-# React + Vite
+# 🧠 AI-Powered Image Enhancer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+In this project, I built an **AI-powered image enhancer** using **React**. This tool uses artificial intelligence to **enhance image quality**, **upscale resolution**, and **bring out hidden details** — all in real time.
 
-Currently, two official plugins are available:
+> 📽️ **Watch the full demo** on YouTube: [Video Link](https://youtu.be/your-video-link)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+> 📂 **Source Code**: [GitHub Repository](https://github.com/master-dhanesh/react-ai-image-enhancer)
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🚀 Features
+
+- 🧠 AI-based image enhancement
+- 🔍 Resolution upscaling
+- 🎨 Detail sharpening and color correction
+- ⚛️ Built with React and Tailwind CSS
+- ⚡ Real-time processing with preview
+
+---
+
+## 🔧 Tech Stack
+
+- **React** – Frontend framework
+- **Tailwind CSS** – For styling
+- **AI Model/API** – For processing and enhancing images *(optional note if using an external AI service)*
+
+---
+
+## 📚 What You’ll Learn
+
+- ✔ How AI enhances image quality
+- ✔ Using React for AI-based applications
+- ✔ Step-by-step development flow
+- ✔ Real-time image enhancement techniques
+
+---

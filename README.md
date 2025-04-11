@@ -31,3 +31,5 @@ In this project, I built an **AI-powered image enhancer** using **React**. This 
 - ✔ Real-time image enhancement techniques
 
 ---
+
+BEFORE | AFTER

@@ -6,19 +6,19 @@ const BASE_URL = "https://techhk.aoscdn.com/";
 const MAXIMUM_RETRIES = 20;
 
 export const enhancedImageAPI = async (file) => {
-    try {
-        const taskId = await uploadImage(file);
-        console.log("Image Uploaded Successfully, Task ID:", taskId);
+  try {
+      const taskId = await uploadImage(file);
+      console.log("Image Uploaded Successfully, Task ID:", taskId);
 
-        const enhancedImageData = await fetchEnhancedImage(taskId);
-        console.log("Enhanced Image Data:", enhancedImageData);
+      const enhancedImageData = await PollForEnhancedImage(taskId);
+      console.log("Enhanced Image Data:", enhancedImageData);
 
-        console.log(enhancedImageData);
-        // return enhancedImageData;
-    } catch (error) {
-        console.log("Error enhancing image:", error.message);
-    }
+      return enhancedImageData;
+  } catch (error) {
+      console.log("Error enhancing image:", error.message);
+  }
 };
+
 
 const uploadImage = async (file) => {
     const formData = new FormData();
@@ -42,6 +42,27 @@ const uploadImage = async (file) => {
     return data.data.task_id;
 };
 
+
+
+const PollForEnhancedImage = async (taskId, retries = 0) => {
+  const result = await fetchEnhancedImage(taskId);
+
+  if (result.state === 4) {
+      console.log(`Processing...(${retries}/${MAXIMUM_RETRIES})`);
+
+      if (retries >= MAXIMUM_RETRIES) {
+          throw new Error("Max retries reached. Please try again later.");
+      }
+
+      // wait for 2 second
+      await new Promise((resolve) => setTimeout(resolve, 2000));
+
+      return PollForEnhancedImage(taskId, retries + 1);
+  }
+
+  console.log("Enhanced Image URL:", result);
+  return result;
+};
 
 const fetchEnhancedImage = async (taskId) => {
     const { data } = await axios.get(
